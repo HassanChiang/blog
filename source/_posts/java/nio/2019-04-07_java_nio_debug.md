@@ -14,7 +14,7 @@ nav:
 categories:
 - Java NIO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
 当客户端连接关闭时，服务器select()不会阻塞，然后一直分发读就绪操作，且读到的字节长度都是0，这是什么情况。

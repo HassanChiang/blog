@@ -13,7 +13,7 @@ nav:
 categories:
 - Java IO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
 传统的字符替换，我们通常会想到使用 String.replace()，但是这个有些问题。

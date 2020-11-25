@@ -16,7 +16,7 @@ nav:
 categories:
 - Java NIO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
 ## 什么是直接内存与非直接内存

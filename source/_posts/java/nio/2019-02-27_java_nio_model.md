@@ -15,7 +15,7 @@ nav:
 categories:
 - Java NIO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
 Java IO 模型对于 Java 开发工程师来说，是日常工作中经常接触的内容，特别是随着分布式系统的兴起，IO 也显得越来越重要，Java 的 IO 模型本质上还是利用操作系统提供的接口来实现，不熟悉这一部分内容的话，可以先看一下上篇文章[Unix 网络 IO 模型及 Linux 的 IO 多路复用模型](https://tech.fenxiangz.com/topic/70/unix-%E7%BD%91%E7%BB%9C-io-%E6%A8%A1%E5%9E%8B%E5%8F%8A-linux-%E7%9A%84-io-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%A8%A1%E5%9E%8B)，本文跟上篇的内容是紧密相连的，特别是本文的重点 —— Java NIO 部分，其底层原理就是 UNIX 的 IO 多路复用，IO 多路复用在上篇文章中讲述了很多。

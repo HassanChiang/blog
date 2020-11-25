@@ -13,7 +13,7 @@ nav:
 categories:
 - Java IO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
  System.out, System.in 和 System.err 在源码里的定义是：

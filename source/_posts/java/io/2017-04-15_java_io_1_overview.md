@@ -13,7 +13,7 @@ nav:
 categories:
 - Java IO
 
-image: images/java/basic/java_logo.png
+image: images/java/io.png
 
 ----
 ## Java IO  支持特性
