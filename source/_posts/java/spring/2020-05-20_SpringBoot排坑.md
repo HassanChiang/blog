@@ -19,7 +19,7 @@ image: images/java/spring-framework.png
 ----
 ###  **1**
 
-![](./2020-05-20_Spring%20Boot%20排坑/1.png) 
+![](./2020-05-20_SpringBoot排坑/1.png) 
 
 2.0.3 有内存暂用 不释放的问题，小版本升级到2.0.5就可以解决；
 

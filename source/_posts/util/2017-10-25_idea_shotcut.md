@@ -12,7 +12,7 @@ nav:
 - 开发工具
 
 categories:
-- 工具
+- IDE
 
 image: images/idea_logo.png
 
