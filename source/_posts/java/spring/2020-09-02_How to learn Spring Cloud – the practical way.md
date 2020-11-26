@@ -12,7 +12,7 @@ nav:
 - Spring
 
 categories:
-- Spring Boot
+- Spring Cloud
 
 image: images/java/spring-framework.png
 
