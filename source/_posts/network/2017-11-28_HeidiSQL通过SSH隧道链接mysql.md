@@ -12,7 +12,7 @@ nav:
 - 计算机网络
 
 categories:
-- 其他
+- 网络/其他
 
 image: images/computer-networking.png
 

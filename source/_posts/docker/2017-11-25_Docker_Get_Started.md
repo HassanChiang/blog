@@ -8,7 +8,7 @@ tags:
 - 入门
 
 nav:
-- 开发工具
+- 工具
 
 categories:
 - Docker

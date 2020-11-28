@@ -6,7 +6,7 @@ description:
 tags:
 - 分布式
 - 脑裂
-- 理论
+- 概念
 
 nav:
 - 分布式

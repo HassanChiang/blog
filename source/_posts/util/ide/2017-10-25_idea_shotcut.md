@@ -9,7 +9,7 @@ tags:
 - Java
 
 nav:
-- 开发工具
+- 工具
 
 categories:
 - IDE

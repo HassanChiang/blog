@@ -10,7 +10,7 @@ nav:
 - Linux
 
 categories:
-- Linux
+- 其他
 
 image: images/linux.png
 
