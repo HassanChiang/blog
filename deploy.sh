@@ -1,6 +1,6 @@
 noFlag="Already up-to-date."
 result=`git pull | grep "Already up-to-date."`
-if [ $noFlag == $result ]; then
+if [ "$noFlag" == "$result" ]; then
     exit 0
 fi
 
