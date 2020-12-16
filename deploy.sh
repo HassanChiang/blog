@@ -1,3 +1,5 @@
+source ~/.bash_profile
+
 result=`git pull | grep "Already up-to-date."`
 if [ "Already up-to-date." == "$result" ]; then
     exit 0
