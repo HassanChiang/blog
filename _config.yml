@@ -111,7 +111,7 @@ header_icon: favico.png
 
 gitalk:
   client_id: 'a33ab8f0fc90bd0b86d7'
-  client_secret: 'cfa4b020ca99ef91be8f4bf8180afbe831bf2a75'
+  client_secret: 'c40c1e6416404bc922667f4b514e62e128cf428a'
   accessToken: ''
   repo: 'blogcmt'
   owner: 'HassanChiang'
