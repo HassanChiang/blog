@@ -3,7 +3,7 @@ if [ "Already up-to-date." == "$result" ]; then
     exit 0
 fi
 
-echo "begin deploy blog : $date" >> deploy.log
+echo "begin deploy blog : "`date` >> deploy.log
 hexo generate
 
 cd ../hassanchiang.github.io/
