@@ -17,8 +17,6 @@ categories:
 image: images/grafana.png
 
 ----
-# 从零开始搭建Prometheus自动监控报警系统（企业级） #
-
 ## 什么是Prometheus? ##
 
 Prometheus是由SoundCloud开发的开源监控报警系统和时序列数据库(TSDB)。Prometheus使用Go语言开发，是Google BorgMon监控系统的开源版本。 
