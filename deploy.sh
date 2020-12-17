@@ -12,7 +12,9 @@ cd ../hassanchiang.github.io/
 
 git reset --hard
 
-git pull 
+git pull
+
+chmod +x ./deploy.sh
 
 rsync -avz --delete /root/blog/blog/public/ /root/blog/hassanchiang.github.io/ --exclude=.git --exclude=CNAME --exclude=mind
 

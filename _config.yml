@@ -109,12 +109,13 @@ post_asset_folder: true
 
 header_icon: favico.png
 
-gitalk:
-  client_id: 'a33ab8f0fc90bd0b86d7'
-  client_secret: 'c40c1e6416404bc922667f4b514e62e128cf428a'
-  accessToken: ''
-  repo: 'blogcmt'
-  owner: 'HassanChiang'
+#gitalk:
+#  client_id: 'a33ab8f0fc90bd0b86d7'
+#  client_secret: 'c40c1e6416404bc922667f4b514e62e128cf428a'
+#  accessToken: ''
+#  repo: 'blogcmt'
+#  owner: 'HassanChiang'
+
 widgets:
   mobile_qrcode: false # 开启移动端二维码，扫一扫，手机上阅读
   caidan: true  # 开启彩蛋，点击屏幕会随机弹出 '点个赞','留个言'等
