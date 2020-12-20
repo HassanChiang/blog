@@ -1,41 +1,25 @@
----
-
+----
 title: Java7 里 try-with-resources 分析
 date: 2016-11-28 07:59:24
-description:
-{: id="20201220214147-xhrxyq6"}
+description: 
 
 tags:
-{: id="20201220214147-489c9cq"}
-
-- {: id="20201220214147-0iguidx"}异常
-- {: id="20201220214147-56x7tuz"}Java异常
-- {: id="20201220214147-qkbweqg"}Java
-{: id="20201220214147-zucb0xq"}
+- 异常
+- Java异常
+- Java
 
 nav:
-{: id="20201220214147-s8cl99a"}
-
-- {: id="20201220214147-3mnjfpd"}Java
-{: id="20201220214147-xbycad7"}
+- Java
 
 categories:
-{: id="20201220214147-xuzywxi"}
-
-- {: id="20201220214147-4829cxb"}Java 基础
-{: id="20201220214147-42gmz0b"}
+-  Java 基础
 
 image: images/java/basic/java_logo.png
-{: id="20201220214147-azsxqjs"}
 
----
-
+----
 这个所谓的 try-with-resources，是个语法糖。实际上就是自动调用资源的 close() 函数。
-{: id="20201220214147-fbhzv6y"}
 
 例如：
-{: id="20201220214147-kzunzy5"}
-
 ```
 static String readFirstLineFromFile(String path) throws IOException {  
     try (BufferedReader br = new BufferedReader(new FileReader(path))) {  
@@ -43,13 +27,9 @@ static String readFirstLineFromFile(String path) throws IOException {
     }  
 }  
 ```
-{: id="20201220214147-k31sccm"}
-
 可以看到 try 语句多了个括号，而在括号里初始化了一个 BufferedReader。
 这种在 try 后面加个括号，再初始化对象的语法就叫 try-with-resources。
 实际上，相当于下面的代码（其实略有不同，下面会说明）：
-{: id="20201220214147-nq20ksc"}
-
 ```
 static String readFirstLineFromFileWithFinallyBlock(String path) throws IOException {  
     BufferedReader br = new BufferedReader(new FileReader(path));  
@@ -60,18 +40,13 @@ static String readFirstLineFromFileWithFinallyBlock(String path) throws IOExcept
     }  
 }  
 ```
-{: id="20201220214147-jby8va2"}
 
 很容易可以猜想到，这是编绎器自动在 try-with-resources 后面增加了判断对象是否为 null，如果不为 null，则调用 close() 函数的的字节码。
-{: id="20201220214147-6ax6hlm"}
 
 只有实现了 java.lang.AutoCloseable 接口，或者 java.io.Closable（实际上继随自 java.lang.AutoCloseable）接口的对象，才会自动调用其 close() 函数。
 有点不同的是 Java.io.Closable 要求一实现者保证 close 函数可以被重复调用。而 AutoCloseable 的 close() 函数则不要求是幂等的。具体可以参考 Javadoc。
-{: id="20201220214147-mocv1u2"}
 
 下面从编绎器生成的字节码来分析下，try-with-resources 到底是怎样工作的：
-{: id="20201220214147-c72gi1y"}
-
 ```
 public class TryStudy implements AutoCloseable{  
     static void test() throws Exception {  
@@ -84,10 +59,7 @@ public class TryStudy implements AutoCloseable{
     }  
 }  
 ```
-{: id="20201220214147-ghbfg2w"}
-
 TryStudy 实现了 AutoCloseable 接口，下面来看下 test 函数的字节码：
-{: id="20201220214147-drwvrk4"}
 
 ```
 static test()V throws java/lang/Exception   
@@ -155,13 +127,9 @@ static test()V throws java/lang/Exception
   MAXSTACK = 2  
   MAXLOCALS = 3 
 ```
-{: id="20201220214147-u2a087i"}
-
 从字节码里可以看出，的确是有判断 tryStudy 对象是否为 null，如果不是 null，则调用 close 函数进行资源回收。
 再仔细分析，可以发现有一个 Throwable.addSuppressed 的调用，那么这个调用是什么呢？
 其实，上面的字节码大概是这个样子的（当然，不完全是这样的，因为汇编的各种灵活的跳转用 Java 是表达不出来的）：
-{: id="20201220214147-4sdgvg8"}
-
 ```
 static void test() throws Exception {  
     TryStudy tryStudy = null;  
@@ -181,12 +149,9 @@ static void test() throws Exception {
     }  
 }  
 ```
-{: id="20201220214147-zriq32s"}
-
 有点晕是吧，其实很简单。使用了 try-with-resources 语句之后，有可能会出现两个异常，一个是 try 块里的异常，一个是调用 close 函数里抛出的异常。
 当然，平时我们写代码时，没有关注到。一般都是再抛出 close 函数里的异常，前面的异常被丢弃了。
 如果在调用 close 函数时出现异常，那么前面的异常就被称为 Suppressed Exceptions，因此 Throwable 还有个 addSuppressed 函数可以把它们保存起来，当用户捕捉到 close 里抛出的异常时，就可以调用 Throwable.getSuppressed 函数来取出 close 之前的异常了。
-{: id="20201220214147-yeabgvl"}
 
 总结：
 使用 try-with-resources 的语法可以实现资源的自动回收处理，大大提高了代码的便利性，和 mutil catch 一样，是个好东东。
@@ -196,11 +161,6 @@ java.io.Closable 接口要求一实现者保证 close 函数可以被重复调�
 http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html
 http://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html
-{: id="20201220214147-bs1d21r"}
 
 原文
 http://blog.csdn.net/hengyunabc/article/details/18459463
-{: id="20201220214147-lr3b94w"}
-
-
-{: id="20201220214147-q69klxj" type="doc"}
