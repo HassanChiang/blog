@@ -1,29 +1,36 @@
 # Hexo-theme-geektutu
+{: id="20201220214147-rwwmowm"}
 
 > [极客兔兔的博客](https://geektutu.com)目前使用该主题。
 > [Github - Geektutu's Blog](https://github.com/geektutu/geektutu-blog)
+> {: id="20201220214147-c8xbk58"}
+{: id="20201220214147-r0trigv"}
 
 ![样图](Geektutu.png)
+{: id="20201220214147-ae7sfk8"}
 
 ## 1. 特性
+{: id="20201220214147-3c7xdnf"}
 
-- [x] 支持标签、归档 (2019-06-06)。
-- [x] 支持`baidu` `google` `biying` `360`站点认证，以及`baidu`站点统计(2019-06-07)。
-- [x] 支持显示目录，目录随文章滚动高亮(2019-06-07)。
-- [x] 增加对gitalk（基于Github Issue第三方评论）的支持(2019-06-07)。
-- [x] 响应式布局，支持PC和移动端(2019-06-08)。
-- [x] 增加支付宝、微信赞赏功能(2019-06-08)。
-- [x] 对专题进行强化，聚合同专题链接，[点击查看效果](https://geektutu.com/post/tensorflow-make-npy-hdf5-data-set.html)(2019-06-13)。
-- [x] 点击文章区域的图片，可以查看大图，再点击图片则关闭。(2019-06-17)
-- [x] 使用QRious实现生成二维码功能，方便微信扫一扫，阅读/分享。(2019-06-17)
-- [x] 添加开关控制百度网址自动推送功能。(2019-06-22)
-- [x] 添加点击页面出现彩蛋的特效。(2019-06-22)
-- [x] 侧边栏目录与专题可进行切换，完善内链功能，方便依次浏览所有同专题的文章，进一步强化专题。(2019-06-22)
-- [x] 添加文章置顶功能。(2019-06-17)
-- [x] 不蒜子统计。(2019-08-09)
-- [x] 新增 Cheat Sheet 样式。 [点击查看效果](https://geektutu.com/post/cheat-sheet-sqlite.html) (2020-03-01)
+- {: id="20201220214147-tefy7vz"}[X] 支持标签、归档 (2019-06-06)。
+- {: id="20201220214147-q5j11ls"}[X] 支持`baidu` `google` `biying` `360`站点认证，以及`baidu`站点统计(2019-06-07)。
+- {: id="20201220214147-ido6eyf"}[X] 支持显示目录，目录随文章滚动高亮(2019-06-07)。
+- {: id="20201220214147-nciu1wh"}[X] 增加对gitalk（基于Github Issue第三方评论）的支持(2019-06-07)。
+- {: id="20201220214147-hv0ip9q"}[X] 响应式布局，支持PC和移动端(2019-06-08)。
+- {: id="20201220214147-09vng1o"}[X] 增加支付宝、微信赞赏功能(2019-06-08)。
+- {: id="20201220214147-58zjmhf"}[X] 对专题进行强化，聚合同专题链接，[点击查看效果](https://geektutu.com/post/tensorflow-make-npy-hdf5-data-set.html)(2019-06-13)。
+- {: id="20201220214147-1xvve8m"}[X] 点击文章区域的图片，可以查看大图，再点击图片则关闭。(2019-06-17)
+- {: id="20201220214147-nhei9sl"}[X] 使用QRious实现生成二维码功能，方便微信扫一扫，阅读/分享。(2019-06-17)
+- {: id="20201220214147-3jagcf2"}[X] 添加开关控制百度网址自动推送功能。(2019-06-22)
+- {: id="20201220214147-u6y38av"}[X] 添加点击页面出现彩蛋的特效。(2019-06-22)
+- {: id="20201220214147-kkngl7r"}[X] 侧边栏目录与专题可进行切换，完善内链功能，方便依次浏览所有同专题的文章，进一步强化专题。(2019-06-22)
+- {: id="20201220214147-af8wf2d"}[X] 添加文章置顶功能。(2019-06-17)
+- {: id="20201220214147-0771v5r"}[X] 不蒜子统计。(2019-08-09)
+- {: id="20201220214147-75sr9vp"}[X] 新增 Cheat Sheet 样式。 [点击查看效果](https://geektutu.com/post/cheat-sheet-sqlite.html) (2020-03-01)
+{: id="20201220214147-4rkgzzy"}
 
 ## 2. Hexo 基础命令
+{: id="20201220214147-4w8874s"}
 
 ```bash
 hexo new post "<post name>" # 创建一篇新文章
@@ -31,19 +38,25 @@ hexo clean && hexo generate # 生成静态文件
 hexo server # 本地调测
 hexo deploy # 自动部署到你配置的仓库的gh-pages分支
 ```
+{: id="20201220214147-w514wlk"}
 
 ## 3. 如何使用该主题
+{: id="20201220214147-0skdk26"}
 
-- 第一步，初始化博客
+- {: id="20201220214147-k0ttxkg"}第一步，初始化博客
+{: id="20201220214147-emywvks"}
 
 ```bash
 cd <empty_dir> # 进入一个空目录
 hexo init      # 初始化hexo博客
 ```
+{: id="20201220214147-rtmlb8j"}
 
-- 第二步，将package.json中的内容替换为[4.1](#user-content-41-packagejson)中的内容
-
-- 第三步，下载主题，并启动
+- {: id="20201220214147-mpjj38c"}第二步，将package.json中的内容替换为[4.1](#user-content-41-packagejson)中的内容
+  {: id="20201220214147-cu6wrl2"}
+- {: id="20201220214147-3696gn3"}第三步，下载主题，并启动
+  {: id="20201220214147-ddrqbii"}
+{: id="20201220214147-b2ixq2t"}
 
 ```bash
 npm i   # 安装依赖
@@ -51,8 +64,10 @@ npm update # 下载geektutu主题
 npm build  # 生成页面
 npm start  # http://localhost:4000 可以看到效果
 ```
+{: id="20201220214147-rhxdwal"}
 
-- 最终的目录结构
+- {: id="20201220214147-xcu1khu"}最终的目录结构
+{: id="20201220214147-7sz7ux2"}
 
 ```bash
 |--node_modules/
@@ -79,10 +94,13 @@ npm start  # http://localhost:4000 可以看到效果
 |--_config.xml   # 配置在这里
 |--package.json
 ```
+{: id="20201220214147-8e6zlme"}
 
 ## 4. 我的博客配置
+{: id="20201220214147-ucppgxv"}
 
 ### 4.1 package.json
+{: id="20201220214147-3jweiwz"}
 
 ```json
 {
@@ -113,8 +131,10 @@ npm start  # http://localhost:4000 可以看到效果
   }
 }
 ```
+{: id="20201220214147-ouzvy5u"}
 
 ### 4.2 _config.yml
+{: id="20201220214147-jwqrzw4"}
 
 ```yml
 # Hexo Configuration
@@ -200,10 +220,13 @@ feed:
   path: feed.xml
   icon: img/icon.png
 ```
+{: id="20201220214147-ugwab44"}
 
 ### 4.3 md参考
+{: id="20201220214147-yrct4mt"}
 
-- archives/index.md [效果](https://geektutu.com/archives)
+- {: id="20201220214147-f197t5l"}archives/index.md [效果](https://geektutu.com/archives)
+{: id="20201220214147-ogc2lsj"}
 
 ```markdown
 ---
@@ -212,8 +235,10 @@ title: "归档"
 description: "极客兔兔的博客的归档列表"
 ---
 ```
+{: id="20201220214147-8e3xv7t"}
 
-- tags/index.md  [效果](https://geektutu.com/tags)
+- {: id="20201220214147-bvue4vz"}tags/index.md  [效果](https://geektutu.com/tags)
+{: id="20201220214147-qywptjg"}
 
 ```markdown
 ---
@@ -222,8 +247,10 @@ title: "标签"
 description: "极客兔兔的博客的标签列表"
 ---
 ```
+{: id="20201220214147-7oali3y"}
 
-- series/index.md  [效果](https://geektutu.com/series)
+- {: id="20201220214147-95vtbi1"}series/index.md  [效果](https://geektutu.com/series)
+{: id="20201220214147-4emtj43"}
 
 ```markdown
 ---
@@ -232,8 +259,10 @@ title: "专题"
 description: "极客兔兔的博客的专题列表"
 ---
 ```
+{: id="20201220214147-po44j2r"}
 
-- _posts/about.md [效果](https://geektutu.com/post/about.html)
+- {: id="20201220214147-n93lbe8"}_posts/about.md [效果](https://geektutu.com/post/about.html)
+{: id="20201220214147-47x903y"}
 
 ```markdown
 ---
@@ -249,8 +278,10 @@ tags:
 ··· 省略
 
 ```
+{: id="20201220214147-s53yig5"}
 
-- _posts/tensorflow-mnist-simplest.md [效果](https://geektutu.com/post/tensorflow-mnist-simplest.html)
+- {: id="20201220214147-3y5ns1r"}_posts/tensorflow-mnist-simplest.md [效果](https://geektutu.com/post/tensorflow-mnist-simplest.html)
+{: id="20201220214147-1f77wtq"}
 
 ```markdown
 ---
@@ -275,12 +306,20 @@ image: post/tensorflow-mnist-simplest/xxx.jpg
 
 ··· 省略
 ```
+{: id="20201220214147-07x42ea"}
 
 > 注意，这里的`image`是显示在主页和推荐阅读文章卡片左侧的图片，尽量选择方形的图片，相对路径从`根路径`开始。
 > 关于`nav`，默认导航框显示的是 categories 的值，避免分类太多，可以使用nav标签聚合，属于同一`nav`的 `categories` 导航链接将会聚合在一起。
 > nav 可选设置，若不设置，将平铺所有的 `categories`。
 > top 是置顶顺序。
+> {: id="20201220214147-bye24rx"}
+{: id="20201220214147-v4nwvta"}
 
 ## 5. 最后
+{: id="20201220214147-na7kirn"}
 
 喜欢就点个[star](https://github.com/geektutu/hexo-theme-geektutu)吧。
+{: id="20201220214147-0ls9i37"}
+
+
+{: id="20201220214147-zfntrqs" type="doc"}

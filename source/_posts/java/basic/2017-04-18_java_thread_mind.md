@@ -15,9 +15,14 @@ categories:
 -  Java 基础
 
 image: images/java/basic/java_logo.png
-
 ---
+{: id="20201220214147-88em5ng"}
 
 整理一份Java Thread的思维导图，持续更新中…
+{: id="20201220214147-hhc1gss"}
 
 https://blog.fenxiangz.com/mind/?url=examples%2FJavaThread.mymind
+{: id="20201220214147-rx1kzo2"}
+
+
+{: id="20201220214147-8tovuox" type="doc"}
