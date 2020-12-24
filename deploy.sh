@@ -5,6 +5,8 @@ if [ "Already up-to-date." == "$result" ]; then
     exit 0
 fi
 
+npm install
+
 echo "begin deploy blog : "`date` >> deploy.log
 hexo generate
 
