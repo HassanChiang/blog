@@ -105,7 +105,7 @@ header_icon: favico.png
 favicon: /favicon.ico
 
 excerpt:
-  depth: 5
+  depth: 3
   excerpt_excludes: []
   more_excludes: []
   hideWholePostExcerpts: true
