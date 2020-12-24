@@ -44,13 +44,7 @@ render_drafts: false
 #post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+
 prismjs:
   enable: false
   preprocess: true
@@ -98,7 +92,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: geektutu
+plugins: hexo-generate-feed
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -106,25 +101,27 @@ deploy:
   type: ''
 
 post_asset_folder: true
-
 header_icon: favico.png
+favicon: /favicon.ico
 
-#gitalk:
-#  client_id: 'a33ab8f0fc90bd0b86d7'
-#  client_secret: 'c40c1e6416404bc922667f4b514e62e128cf428a'
-#  accessToken: ''
-#  repo: 'blogcmt'
-#  owner: 'HassanChiang'
+excerpt:
+  depth: 5
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 
-widgets:
-  mobile_qrcode: false # 开启移动端二维码，扫一扫，手机上阅读
-  caidan: true  # 开启彩蛋，点击屏幕会随机弹出 '点个赞','留个言'等
-  busuanzi: true # 开启不蒜子统计 https://busuanzi.ibruce.info/
-
-feed:
-  enable: true
-  limit: 0
-  type: rss2
-  content: false
-  path: feed.xml
-  icon: favico.png
+# next add ------------------
+disqus:
+  enable: false
+  shortname:
+  count: true
+canvas_nest: true
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+  categories: /categories
+pjax: true
+highlight_theme: normal
+fancybox: true
+since: 2013
