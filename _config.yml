@@ -60,11 +60,6 @@ index_generator:
   per_page: 10
   order_by: -date
 
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
