@@ -1,5 +1,7 @@
 source ~/.bash_profile
 
+git reset --hard
+
 result=`git pull | grep "Already up-to-date."`
 if [ "Already up-to-date." == "$result" ]; then
     exit 0
