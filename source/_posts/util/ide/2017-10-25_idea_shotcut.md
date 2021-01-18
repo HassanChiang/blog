@@ -4,9 +4,8 @@ date: 2017-10-25 11:29:24
 description: 
 
 tags:
+- IDE
 - Idea
-- JavaIDE
-- Java
 
 nav:
 - 工具
