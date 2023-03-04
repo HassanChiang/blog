@@ -44,6 +44,9 @@ config:
   menu_highlight: false # 是否开启当前菜单高亮显示
   thumbnail: false # enable posts thumbnail, options: true, false
   excerpt_link: Read More
+  #New
+  isNewTabLinks: false #是否链接打开新标签页
+  autoUnfold: true # 默认展开文章目录
 
 # Pagination
 pagination:
@@ -52,6 +55,8 @@ pagination:
     alwayShow: true
   next:
     alwayShow: true
+  midSize: 2 # 当前页码左右到省略号显示的页码数，默认2，表现为 1 ... 4 5 6 7 8 ... 10
+  showContent: true # 页面文章小于2篇时显示文章内容
 
 # Sidebar
 sidebar: right
@@ -101,13 +106,21 @@ share:
   mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
 
 # Github
-github: 
+github:
   username: hassan.chiang  # github username
+
+# Repository Info (This will override 'github' option)
+# 项目仓库信息（将会覆盖 github 项）
+#repository:
+#  platform: github # 托管平台（github | gitee）
+#  username: cofess # 用户名
 
 # Comment
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 comment:
+#  type: valine  # 启用哪种评论系统
+#  disqus:  # enter disqus shortname here
   type: disqus  # 启用哪种评论系统
   disqus: 513 # enter disqus shortname here
   youyan: 
@@ -126,6 +139,9 @@ comment:
     repo:  #必须. GitHub repository.
     ClientID:  #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
+    enableHotKey: true
+    language: zh-CN
+    
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
@@ -152,6 +168,7 @@ douban:
   user: # 豆瓣用户名
   start: 0 # 从哪一条记录开始
   count: 100 # 获取豆瓣书单数据条数
+  apikey: # 豆瓣apikey
   
 # PV
 pv:
@@ -181,8 +198,10 @@ google_plus:
 fb_admins:
 fb_app_id:  
   
+# profile
 profile:
-  enabled: true # Whether to show profile bar
+  enabled: false # Whether to show profile bar
+  articleSelfBlock: true # 关闭文章下方的自我介绍
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
   author: 分享之
@@ -194,7 +213,7 @@ profile:
   social:
     links:
       #github: https://github.com/cofess
-     # weibo: http://weibo.com/cofess
+      #weibo: http://weibo.com/cofess
       #twitter: https://twitter.com/iwebued
       # facebook: /
       # dribbble: /
